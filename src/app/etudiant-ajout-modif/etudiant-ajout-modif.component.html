@@ -1,0 +1,42 @@
+<div mat-dialog-title>
+    <h1>Formulaire Etudiant</h1>
+</div>
+<form [formGroup]="etForm" (ngSubmit)="envoieForm()">
+<div mat-dialog-content>
+    <div>
+        <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label>Matricule</mat-label>
+           <input matInput type="text" formControlName="matricule" [disabled]="true">
+         </mat-form-field>
+    </div>
+    <div class="row">
+     <mat-form-field appearance="fill">
+         <mat-label>Prenom</mat-label>
+        <input matInput type="text" formControlName="prenom" (input)="generateMatricule()">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+       <mat-label>Nom</mat-label>
+        <input matInput type="text" formControlName="nom" (input)="generateMatricule()">
+      </mat-form-field>
+    </div>  
+<div class="row">
+     <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Age</mat-label>
+       <input matInput type="number" formControlName="age">
+     </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="fill" class="example-full-width">
+            <mat-label>Choisir la classe</mat-label>
+            <mat-select formControlName="classe">
+              <mat-option *ngFor="let val of classe" [value]="val">{{val}}</mat-option>
+            </mat-select>
+     </mat-form-field>
+</div>
+</div>
+
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="reset">Annuler</button>
+    <button mat-raised-button color="accent" type="submit">{{data ? 'Modifier' : 'Ajouter'}}</button>
+</div>
+</form>

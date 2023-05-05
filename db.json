@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "etudiants": [
+    {
+      "matricule": "DPorro-30042023014200-@",
+      "prenom": "Dolore ",
+      "nom": "Porro",
+      "age": 35,
+      "classe": "L1 RI",
+      "id": 3
+    },
+    {
+      "matricule": "NSunt -30042023014141-@",
+      "prenom": "Non corporis volupta",
+      "nom": "Sunt ",
+      "age": 30,
+      "classe": "L3 GL",
+      "id": 4
+    },
+    {
+      "matricule": "LSuscipit -30042023014121-@",
+      "prenom": "Laboriosam ut culpa",
+      "nom": "Suscipit ",
+      "age": 45,
+      "classe": "L2 GL",
+      "id": 6
+    },
+    {
+      "matricule": "rdiasse-30042023014133-@",
+      "prenom": "robert",
+      "nom": "diasse",
+      "age": 25,
+      "classe": "L1 RI",
+      "id": 8
+    },
+    {
+      "matricule": "NVero -04052023193922-@",
+      "prenom": "Nemo rerum commodi f",
+      "nom": "Vero ",
+      "age": 36,
+      "classe": "L1 GL",
+      "id": 12
+    }
+  ]
+}
