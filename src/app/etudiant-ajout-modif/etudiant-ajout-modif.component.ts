@@ -51,7 +51,12 @@ generateMatricule() {
 envoieForm(){
   if(this.etForm.valid){
     // console.log(this.etForm.value);  
-    const formData = this.etForm.getRawValue();
+    if(this.etForm.controls['nom'].value === '' && this.etForm.controls['prenom'].value === ''&& this.etForm.controls['matricule'].value === ''&& this.etForm.controls['age'].value === ''&& this.etForm.controls['classe'].value === ''){
+      // alert('les champs ne doivent pas etre vide');
+      this._coreService.openSnackBar('les champs ne doivent pas etre vide');
+      // this.listEtudiant(); 
+    }else{
+      const formData = this.etForm.getRawValue();
     if(this.data){
       this._etService.modifEtudiant(this.data.id,formData).subscribe({
         next: (val:any) => {
@@ -78,6 +83,8 @@ envoieForm(){
         } 
       })
     }
+    }
+    
 }
 }
 
